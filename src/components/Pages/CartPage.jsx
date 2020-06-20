@@ -17,9 +17,7 @@ function CartPage(props){
       }
 
     useEffect(() => {
-        // if(productId){
-        //     dispatch(addToCart(productId, qty));
-        // }
+
     }, [dispatch, productId, qty]);
 
     const checkoutHandler = () => {

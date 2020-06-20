@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import './CartPage.css';
-import { addToCart, removeFromCart } from '../../actions/CartActions';
+import { removeFromCart } from '../../actions/CartActions';
 import { useDispatch, useSelector } from 'react-redux';
 
 function CartPage(props){
@@ -17,9 +17,9 @@ function CartPage(props){
       }
 
     useEffect(() => {
-        if(productId){
-            dispatch(addToCart(productId, qty));
-        }
+        // if(productId){
+        //     dispatch(addToCart(productId, qty));
+        // }
     }, [dispatch, productId, qty]);
 
     const checkoutHandler = () => {
@@ -52,12 +52,7 @@ function CartPage(props){
                             {item.name}
                         </div>
                         <div>
-                            {/* Qty:
-                            <select>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                            </select> */}
+                          
                             <button type="button" className="button" onClick={() => removeFromCartHandler(item.product)}>
                                 Delete
                             </button>

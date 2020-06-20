@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import {Link} from 'react-router-dom';
 
 export default function Sidebar() {
 
@@ -13,7 +14,8 @@ export default function Sidebar() {
             <button onClick={closeMenu} className="sidebar-close-btn">X</button>
             <ul className="sidebar-list">
                 <li>
-                <a href="index.html">landscape</a>
+                <Link to="products"> products</Link>
+                {/* <a href="index.html">landscape</a> */}
                 </li>
                 <li>
                 <a href="index.html">Portraits</a>

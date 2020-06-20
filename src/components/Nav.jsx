@@ -3,21 +3,21 @@ import './Nav.css';
 import {Link} from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
-const openMenu = () => {
+// const openMenu = () => {
+//     document.querySelector(".sidebar").classList.add("open")
+//   };
+
+//   const userSignin = useSelector(state => state.userSignin);
+//   const { userInfo } = userSignin;
+
+function Nav(props){
+
+  const openMenu = () => {
     document.querySelector(".sidebar").classList.add("open")
   };
 
   const userSignin = useSelector(state => state.userSignin);
   const { userInfo } = userSignin;
-
-const nav = (props) => {
-
-  // const openMenu = () => {
-  //   document.querySelector(".sidebar").classList.add("open")
-  // };
-
-  // const userSignin = useSelector(state => state.userSignin);
-  // const { userInfo } = userSignin;
 
   return (
   <div>
@@ -27,7 +27,7 @@ const nav = (props) => {
       <button onClick={openMenu} className="brand-button">
         &#9776;
       </button>
-      <Link to="/">Chelseys Art Book</Link>
+      <Link to="/">Art Book</Link>
     </div>
     <div className="header-links">
       {
@@ -54,4 +54,4 @@ const nav = (props) => {
   
           };
 
-export default nav;
+export default Nav;

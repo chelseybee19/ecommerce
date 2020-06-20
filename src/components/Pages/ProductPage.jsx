@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-// import data from '../data';
 import {Link} from 'react-router-dom';
 import './ProductPage.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { detailsProduct } from '../../actions/productActions';
 import { addToCart } from '../../actions/CartActions';
+
 
 function ProductPage (props) {
     let [qty, setQty] = useState(1);
@@ -22,7 +22,7 @@ function ProductPage (props) {
     const handleAddToCart = () => {
         console.log(+qty, "this is the qty")
         dispatch(addToCart(props.match.params.id, +qty))
-        props.history.push("/cart/" + props.match.params.id +"?qty=" + qty );
+        // props.history.push("/cart/" + props.match.params.id +"?qty=" + qty );
     }
     // const product = data.products.find(x => x._id === props.match.params.id);
     return <div>

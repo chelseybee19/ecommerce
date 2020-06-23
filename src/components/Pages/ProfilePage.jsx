@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import {useHistory} from 'react-router-dom';
 import { logout, update } from '../../actions/UserActions';
 // import { listMyOrders } from '../actions/orderActions';
 import { useDispatch, useSelector } from 'react-redux';
@@ -9,11 +10,13 @@ function ProfilePage(props) {
   const [email, setEmail] = useState('');
   const dispatch = useDispatch();
 
+  let history = useHistory()
+
   const userSignin = useSelector(state => state.userSignin);
   const { userInfo } = userSignin;
   const handleLogout = () => {
     dispatch(logout());
-    props.history.push("/signin");
+    history.push("/signin");
   }
   const submitHandler = (e) => {
     e.preventDefault();

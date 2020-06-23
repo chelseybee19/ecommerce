@@ -17,7 +17,7 @@ export default function Checkout() {
     const handleClick = async () => {
       const body = {
         productCart: stripeData,
-        successUrl: "http://localhost:3000/order",
+        successUrl: "https://the-soso-artist.netlify.app/order",
         cancelUrl: "https://twitter.com",
       };
       const session = await axios.post("https://the-soso-artist.herokuapp.com/payment", body);

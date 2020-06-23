@@ -6,7 +6,7 @@ import Axios from 'axios';
 const listProducts = () =>(dispatch) => {
 
     dispatch({type:PRODUCT_LIST_REQUEST});
-    axios.get("/api/products").then (({data})=>
+    axios.get("https://the-soso-artist.herokuapp.com/api/products").then (({data})=>
     dispatch({type:PRODUCT_LIST_SUCCESS, payload: data})
     ).catch(function(error){
         dispatch({type: PRODUCT_LIST_FAIL, payload: error.message});
@@ -16,7 +16,7 @@ const listProducts = () =>(dispatch) => {
 const detailsProduct = (productId) => (dispatch) => {
 
     dispatch({type:PRODUCT_DETAILS_REQUEST, payload: productId});
-    axios.get("/api/products/" + productId).then (({data})=>
+    axios.get("https://the-soso-artist.herokuapp.com/api/products/" + productId).then (({data})=>
     dispatch({type:PRODUCT_DETAILS_SUCCESS, payload: data})
     ).catch(function(error){
         dispatch({type: PRODUCT_DETAILS_FAIL, payload: error.message});
@@ -28,14 +28,14 @@ const saveProduct = (product) => async (dispatch, getState) => {
       dispatch({ type: PRODUCT_SAVE_REQUEST, payload: product });
       const { userSignin: { userInfo } } = getState();
       if (!product._id) {
-        const { data } = await Axios.post('/api/products', product, {
+        const { data } = await Axios.post('https://the-soso-artist.herokuapp.com/api/products', product, {
           headers: {
             'Authorization': 'Bearer ' + userInfo.token
           }
         });
         dispatch({ type: PRODUCT_SAVE_SUCCESS, payload: data });
       } else {
-        const { data } = await Axios.put('/api/products/' + product._id, product, {
+        const { data } = await Axios.put('https://the-soso-artist.herokuapp.com/api/products/' + product._id, product, {
           headers: {
             'Authorization': 'Bearer ' + userInfo.token
           }
@@ -53,7 +53,7 @@ const saveProduct = (product) => async (dispatch, getState) => {
     try {
       const { userSignin: { userInfo } } = getState();
       dispatch({ type: PRODUCT_DELETE_REQUEST, payload: productId });
-      const { data } = await axios.delete("/api/products/" + productId, {
+      const { data } = await axios.delete("https://the-soso-artist.herokuapp.com/api/products/" + productId, {
         headers: {
           Authorization: 'Bearer ' + userInfo.token
         }

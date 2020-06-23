@@ -20,7 +20,7 @@ export default function Checkout() {
         successUrl: "http://localhost:3000/order",
         cancelUrl: "https://twitter.com",
       };
-      const session = await axios.post("http://localhost:4000/payment", body);
+      const session = await axios.post("https://the-soso-artist.herokuapp.com/payment", body);
       const stripe = await stripePromise;
       const result = await stripe.redirectToCheckout({
         sessionId: session.data.id,

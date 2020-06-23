@@ -21,7 +21,7 @@ function HomePage (props) {
     return loading? <div>Loading...</div> :
     error? <div>{error}</div> :
     <ul className="products">
-        { products.map(product =>
+        { products && products.map(product =>
             <li key={product._id}>
                 <div className="product">
                     <Link to = {'/product/' + product._id}><img className ="product-img" src={product.image} alt="product"/></Link>

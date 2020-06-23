@@ -27,7 +27,7 @@ function Nav(props){
       <button onClick={openMenu} className="brand-button">
         &#9776;
       </button>
-      <Link to="/">Art Book</Link>
+      <Link to="/">The So So Artist</Link>
     </div>
     <div className="header-links">
       {

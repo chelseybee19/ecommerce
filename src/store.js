@@ -5,7 +5,7 @@ import {composeWithDevTools} from 'redux-devtools-extension';
 import { productListReducer, productSaveReducer, productDeleteReducer } from './reducers/productReducers';
 import {productDetailReducer} from './reducers/productDetails';
 import { cartReducer } from './reducers/cartReducers';
-import { userSigninReducer, userRegisterReducer } from './reducers/userReducers';
+import { userSigninReducer, userRegisterReducer, userUpdateReducer } from './reducers/userReducers';
 
 const cartItems = Cookie.getJSON("cartItems") || [];
 const userInfo = Cookie.getJSON("userInfo") || null;
@@ -19,6 +19,7 @@ const reducer= combineReducers({
     cart: cartReducer,
     userSignin: userSigninReducer,
     userRegister: userRegisterReducer,
+    userUpdate: userUpdateReducer,
 });
 
 // const composeEnhancer = window.__REDUC_DEVTOOLS_EXTENSION_COMPOSE__  ;

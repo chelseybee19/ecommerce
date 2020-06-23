@@ -6,6 +6,7 @@ import './ProductPage1.css';
 function ProductsPage1(props) {
   const [modalVisible, setModalVisible] = useState(false);
   const [id, setId] = useState('');
+  const [stripeId, setStripeId] = useState('');
   const [name, setName] = useState('');
   const [price, setPrice] = useState('');
   const [image, setImage] = useState('');
@@ -20,7 +21,7 @@ function ProductsPage1(props) {
   const { loading: loadingSave, success: successSave, error: errorSave } = productSave;
 
   const productDelete = useSelector(state => state.productDelete);
-  const { loading: loadingDelete, success: successDelete, error: errorDelete } = productDelete;
+  const { success: successDelete } = productDelete;
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -36,6 +37,7 @@ function ProductsPage1(props) {
   const openModal = (product) => {
     setModalVisible(true);
     setId(product._id);
+    setStripeId(product.stripeId);
     setName(product.name);
     setPrice(product.price);
     setDescription(product.description);
@@ -48,7 +50,7 @@ function ProductsPage1(props) {
     e.preventDefault();
     dispatch(saveProduct({
       _id: id,
-      name, price, image, artist, category,
+      name, stripeId, price, image, artist, category,
       countInStock, description
     }));
   }
@@ -81,6 +83,13 @@ function ProductsPage1(props) {
               </input>
             </li>
             <li>
+              <label htmlFor="stripeid">
+                Stripe Id
+          </label>
+              <input type="text" name="stripeid" value={stripeId} id="stripeid" onChange={(e) => setStripeId(e.target.value)}>
+              </input>
+            </li>
+            <li>
               <label htmlFor="price">
                 Price
           </label>
@@ -91,7 +100,7 @@ function ProductsPage1(props) {
               <label htmlFor="image">
                 Image
           </label>
-              <input type="file" name="image" value={image} id="image" onChange={(e) => setImage(e.target.value)}>
+              <input type="html" name="image" value={image} id="image" onChange={(e) => setImage(e.target.value)}>
               </input>
             </li>
             <li>
@@ -140,6 +149,7 @@ function ProductsPage1(props) {
           <tr>
             <th>ID</th>
             <th>Name</th>
+            <th>Stripe Id</th>
             <th>Price</th>
             <th>Category</th>
             <th>Artist</th>

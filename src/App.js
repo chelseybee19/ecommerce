@@ -13,6 +13,8 @@ import RegisterPage from './components/Pages/RegisterPage';
 import ProductsPage1 from './components/Pages/ProductPage1';
 import ShippingPage from './components/Pages/ShippingPage';
 import PaymentPage from './components/Pages/PaymentPage';
+import OrderPage from './components/Pages/OrderPage';
+import ProfilePage from './components/Pages/ProfilePage';
 
 function App() {
 
@@ -27,11 +29,6 @@ function App() {
     <div className="grid-container">
     <Nav/>
     <Sidebar/>
-    {/* <StripeCheckout
-      stripeKey=""
-      token=""
-      name="something"
-    /> */}
 
     <main className="main">
       <div>
@@ -43,6 +40,8 @@ function App() {
       <Route path="/products" component={ProductsPage1}/>
       <Route path="/shipping" component={ShippingPage}/>
       <Route path="/payment" component={PaymentPage}/>
+      <Route path="/order" component={OrderPage}/>
+      <Route path="/profile" component={ProfilePage}/>
       </div>
     </main>
     <Footer/>

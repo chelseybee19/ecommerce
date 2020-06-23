@@ -10,7 +10,7 @@ export default function Sidebar() {
       return(
  
            <aside className="sidebar">
-            <h3>Art Catagories</h3>
+            <h2>Art Catagories</h2>
             <button onClick={closeMenu} className="sidebar-close-btn">X</button>
             <ul className="sidebar-list">
                 <li>

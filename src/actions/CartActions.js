@@ -9,6 +9,7 @@ try {
    dispatch({type: CART_ADD_ITEM, payload:{
        product:data._id,
        name:data.name,
+       stripeId:data.stripeId,
        image:data.image,
        price:data.price,
        qty,

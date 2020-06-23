@@ -1,12 +1,17 @@
 .nav {
     grid-area: header;
-    background-color: blueviolet;
+    background-color: #cceabb;
     color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
     /* padding: 1rem; */
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
+  }
+  .brand {
+    width: 35rem;
+    font-size: 28px;
+
   }
   .brand a {
     color: white;
@@ -16,5 +21,5 @@
     color: white;
   }
   a:hover {
-    color: yellow;
+    color: #fdcb9e;
   }

@@ -30,7 +30,7 @@ function HomePage (props) {
                     </div>
                     <div className= "product-artist"> {product.artist}</div>
                     <div>{product.category}</div>
-                    <div className= "price">${product.price}</div>
+                    <div className= "price">€{product.price}</div>
                 </div>
             </li>) 
         }

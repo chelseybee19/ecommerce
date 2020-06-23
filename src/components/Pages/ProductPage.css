@@ -10,6 +10,7 @@
 }
 .details-img img{
     max-width: 50rem;
+    border: 1px solid black;
     widows: 100%;
     
 }
@@ -21,7 +22,7 @@
 }
 .detail-info ul, .details-action ul {
     list-style-type: none;
-    padding: 0;
+    padding: 5rem;
 }
 .detail-info li, .details-action li {
     margin-bottom: 1rem;
@@ -42,11 +43,15 @@
 }
 .button {
     padding: 1rem;
-    background-color: lightgreen;
+    background-color: #fdcb9e;
     border: .1rem black solid;
     border-radius: 0.5rem;
     cursor: pointer;
 }
+.button.secondary {
+    background-color: #3f3f44;
+    color: white;
+}
 .button:hover {
-    border: .1rem green solid;
+    border: .1rem #f7f7f7;
 }

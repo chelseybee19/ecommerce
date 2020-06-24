@@ -34,7 +34,6 @@
 }
 .cart-image{
     flex: 1 1;
-    border: solid 1px black;
 }
 .cart-name {
     flex:8 1;

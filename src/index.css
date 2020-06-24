@@ -130,3 +130,12 @@ a:hover {
   border-top: .3rem #f08000 solid;
   color: #f08000;
 }
+
+/* order page css */
+
+.order-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 1px black;
+}

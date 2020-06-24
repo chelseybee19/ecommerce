@@ -149,7 +149,6 @@ function ProductsPage1(props) {
           <tr>
             <th>ID</th>
             <th>Name</th>
-            <th>Stripe Id</th>
             <th>Price</th>
             <th>Category</th>
             <th>Artist</th>

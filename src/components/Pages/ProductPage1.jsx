@@ -153,7 +153,6 @@ function ProductsPage1(props) {
             <th>Price</th>
             <th>Category</th>
             <th>Artist</th>
-            <th>Action</th>
           </tr>
         </thead>
         <tbody>

@@ -31,9 +31,9 @@ function CartPage(props){
                     <h3>
                         Shopping Cart
                     </h3>
-                    <div>
+                    {/* <div>
                         price
-                    </div>
+                    </div> */}
                 </li>
                 {
                     cartItems.length === 0 ?

@@ -34,7 +34,8 @@
 }
 .cart-image{
     flex: 1 1;
-    width: 50%
+    width: 50%;
+    max-width: 760px;
 }
 .cart-name {
     flex:8 1;

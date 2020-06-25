@@ -45,7 +45,7 @@ a:hover {
 .products li {
   flex: 0 1 28rem;
   margin: 3rem;
-  height: 35rem;
+  height: 45rem;
   padding: 0;
   border-bottom: black .1rem solid;
   list-style-type: none;

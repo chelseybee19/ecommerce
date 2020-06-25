@@ -18,7 +18,7 @@ export default function Checkout() {
       const body = {
         productCart: stripeData,
         successUrl: "https://the-soso-artist.netlify.app/order",
-        cancelUrl: "https://twitter.com",
+        cancelUrl: "https://the-soso-artist.netlify.app/",
       };
       const session = await axios.post("https://the-soso-artist.herokuapp.com/payment", body);
       const stripe = await stripePromise;

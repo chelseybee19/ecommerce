@@ -1,7 +1,11 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 export default function Sidebar() {
+
+    const userSignin = useSelector(state => state.userSignin);
+    const { userInfo } = userSignin;
 
     const closeMenu = () => {
         document.querySelector(".sidebar").classList.remove("open")
@@ -14,8 +18,9 @@ export default function Sidebar() {
             <button onClick={closeMenu} className="sidebar-close-btn">X</button>
             <ul className="sidebar-list">
                 <li>
-                <Link to="products"> products</Link>
-                {/* <a href="index.html">landscape</a> */}
+                {userInfo && userInfo.isAdmin && (
+                    <Link to="products"> products</Link>
+                    )}
                 </li>
                 <li>
                 <a href="index.html">Portraits</a>

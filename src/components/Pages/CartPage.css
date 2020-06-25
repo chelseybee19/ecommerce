@@ -1,3 +1,4 @@
+
 .cart {
     display: flex;
     flex-wrap: wrap;
@@ -37,6 +38,12 @@
     width: 50%;
     max-width: 760px;
 }
+
+.cart-image img{
+    width: 100%;
+    border: 1px solid black;
+}
+
 .cart-name {
     flex:8 1;
 }

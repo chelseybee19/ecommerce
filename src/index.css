@@ -118,6 +118,7 @@ a:hover {
   justify-content: space-between;
   width: 40rem;
   margin: 1rem auto;
+  margin-top: 3rem;
  
 }
 .checkout-steps > div{
@@ -137,5 +138,5 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: solid 1px black;
+  padding-top: 17rem;
 }
